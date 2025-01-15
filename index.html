@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfólio</title>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-    <header id="main-header">
+    <header id="main-header" data-aos="fade-down">
         <div class="container">
             <h1 class="logo">Meu Portfólio</h1>
             <nav>
@@ -17,45 +19,42 @@
                     <li><a href="#projects">Projetos</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
-                <button id="menu-toggle" aria-label="Toggle menu">
-                    <span class="menu-icon"></span>
-                </button>
             </nav>
         </div>
     </header>
-    <section id="about" class="about-section">
+    <section id="about" class="about-section" data-aos="fade-up">
         <div class="container">
             <div class="about-content">
                 <p>Olá, Meu nome é <br> <span>Tiago Alves</span></p>
                 <p>Desenvolvedor Front-End</p>
             </div>
             <div class="about-photo">
-                <img src="src/tecnologias/foto tiago.jpeg" alt="Minha Foto" class="profile-photo">
+                <img src="src/tecnologias/foto tiago.jpeg" alt="Minha Foto" class="profile-photo" data-aos="zoom-in">
             </div>
         </div>
     </section>
     
-    <section id="technologies" class="technologies-section">
+    <section id="technologies" class="technologies-section" >
         <div class="container">
             <h2>Tecnologias</h2>
             <div class="tech-grid">
-                <div class="tech-item">
+                <div class="tech-item" data-aos="flip-left">
                     <img src="src/tecnologias/html (1).png" alt="HTML">
                     <span>HTML</span>
                 </div>
-                <div class="tech-item">
+                <div class="tech-item" data-aos="flip-left">
                     <img src="src/tecnologias/css.png" alt="CSS">
                     <span>CSS</span>
                 </div>
-                <div class="tech-item">
+                <div class="tech-item" data-aos="flip-left">
                     <img src="src/tecnologias/js.png" alt="JavaScript">
                     <span>JavaScript</span>
                 </div>
-                <div class="tech-item">
+                <div class="tech-item" data-aos="flip-left">
                     <img src="src/tecnologias/typescript.png" alt="TypeScript">
                     <span>TypeScript</span>
                 </div>
-                <div class="tech-item">
+                <div class="tech-item" data-aos="flip-left">
                     <img src="src/tecnologias/angular.png" alt="Angular">
                     <span>Angular</span>
                 </div>
@@ -63,11 +62,11 @@
         </div>
     </section>
     
-    <section id="projects" class="projects-section">
+    <section id="projects" class="projects-section"></div>
         <div class="container">
             <h2>Meus Projetos</h2>
             <div class="projects-grid">
-                <div class="project-item">
+                <div class="project-item" data-aos="zoom-in" data-aos-duration="1500">
                     <a href="https://angular-blog-mu.vercel.app/" target="_blank">
                         <img src="src/projetos/angular-blog.jpg" alt="Projeto 1">
                         <div class="project-content">
@@ -76,7 +75,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="project-item">
+                <div class="project-item" data-aos="zoom-in" data-aos-duration="1500">
                     <a href="https://tiagoalvesdasilva.github.io/site_casamento/">
                         <img src="src/projetos/casamento.jpg" alt="Projeto 2">
                         <div class="project-content">
@@ -85,7 +84,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="project-item">
+                <div class="project-item" data-aos="zoom-in" data-aos-duration="1500">
                     <a href="https://tiagoalvesdasilva.github.io/countdown/">
                         <img src="src/projetos/contagem regressiva .jpg" alt="Projeto 3">
                         <div class="project-content">
@@ -94,7 +93,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="project-item">
+                <div class="project-item" data-aos="zoom-in" data-aos-duration="1500">
                     <a href="https://tiagoalvesdasilva.github.io/quiz/">
                         <img src="src/projetos/jogo da velha .jpg" alt="Projeto 4">
                         <div class="project-content">
@@ -103,7 +102,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="project-item">
+                <div class="project-item" data-aos="zoom-in" data-aos-duration="1500">
                     <a href="https://tiagoalvesdasilva.github.io/Validador-de-formularios/">
                         <img src="src/projetos/validador de formulario .jpg" alt="Projeto 5">
                         <div class="project-content">
@@ -120,25 +119,25 @@
         <div class="container">
             <h2>Contato</h2>
             <div class="tech-grid container-contact">
-                <div class="tech-item contact-item">
+                <div class="tech-item contact-item" data-aos="fade-right">
                     <a href="mailto:tiago.alvessilva67@gmail.com">
                         <img src="src/contato/email.png" alt="HTML">
                         <p><strong>Email</strong> <br>tiago.alvessilva67@gmail.com</p>
                     </a>
                 </div>
-                <div class="tech-item contact-item">
+                <div class="tech-item contact-item" data-aos="fade-right">
                     <a href="https://github.com/tiagoalvesdasilva" target="_blank">
                         <img src="src/contato/github.png" alt="HTML">
                         <p><strong>GitHub</strong> <br> @tiagoalves</p>
                     </a>
                 </div>
-                <div class="tech-item contact-item">
+                <div class="tech-item contact-item" data-aos="fade-right">
                     <a href="https://www.linkedin.com/in/tiago-alvesdasilva/" target="_blank">
                         <img src="src/contato/linkedin.png" alt="HTML">
                         <p><strong>Linkedin</strong> <br> @tiagoalves</p>
                     </a>
                 </div>
-                <div class="tech-item contact-item">
+                <div class="tech-item contact-item" data-aos="fade-right">
                     <a href="https://wa.me/5561994176285" target="_blank">
                         <img src="src/contato/whatsapp (1).png" alt="HTML">
                         <p><strong>WhatsApp</strong> <br/> (61) 994176285</p>
@@ -148,5 +147,7 @@
         </div>
     </section>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
 </body>
 </html>

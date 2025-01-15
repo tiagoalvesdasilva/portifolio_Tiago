@@ -9,6 +9,10 @@ header {
   color: #fff;
   padding: 1rem 0;
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   width: 100vw;
 }
 header .container {
@@ -40,31 +44,6 @@ header nav .nav-links li a {
 header nav .nav-links li a:hover {
   color: #007bff;
 }
-header nav #menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-}
-header nav #menu-toggle .menu-icon {
-  width: 25px;
-  height: 2px;
-  background-color: #fff;
-  display: block;
-  position: relative;
-}
-header nav #menu-toggle .menu-icon::before, header nav #menu-toggle .menu-icon::after {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 2px;
-  background-color: #fff;
-}
-header nav #menu-toggle .menu-icon::before {
-  top: -8px;
-}
-header nav #menu-toggle .menu-icon::after {
-  top: 8px;
-}
 
 @media (max-width: 768px) {
   nav .nav-links {
@@ -79,9 +58,6 @@ header nav #menu-toggle .menu-icon::after {
   nav .nav-links li {
     margin: 1rem 0;
     text-align: center;
-  }
-  nav #menu-toggle {
-    display: block;
   }
   nav .nav-links.active {
     display: flex;

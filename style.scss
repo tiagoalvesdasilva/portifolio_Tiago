@@ -13,6 +13,10 @@ header {
     color: $secondary-color;
     padding: 1rem 0;
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;   
     width: 100vw;
 
     .container {
@@ -50,37 +54,6 @@ header {
                 }
             }
         }
-
-        #menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-
-            .menu-icon {
-                width: 25px;
-                height: 2px;
-                background-color: $secondary-color;
-                display: block;
-                position: relative;
-
-                &::before,
-                &::after {
-                    content: '';
-                    position: absolute;
-                    width: 25px;
-                    height: 2px;
-                    background-color: $secondary-color;
-                }
-
-                &::before {
-                    top: -8px;
-                }
-
-                &::after {
-                    top: 8px;
-                }
-            }
-        }
     }
 }
 
@@ -99,10 +72,6 @@ header {
                 margin: 1rem 0;
                 text-align: center;
             }
-        }
-
-        #menu-toggle {
-            display: block;
         }
 
         .nav-links.active {
