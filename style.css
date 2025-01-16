@@ -27,6 +27,9 @@ header .logo {
   font-size: 1.5rem;
   font-weight: bold;
 }
+header nav .menu-toggle {
+  display: none;
+}
 header nav .nav-links {
   display: flex;
   list-style: none;
@@ -45,24 +48,6 @@ header nav .nav-links li a:hover {
   color: #007bff;
 }
 
-@media (max-width: 768px) {
-  nav .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #333;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-  }
-  nav .nav-links li {
-    margin: 1rem 0;
-    text-align: center;
-  }
-  nav .nav-links.active {
-    display: flex;
-  }
-}
 #about {
   background-color: #f9f9f9;
   height: 100vh;
@@ -80,11 +65,6 @@ header nav .nav-links li a:hover {
   height: 100%;
   max-width: none;
 }
-@media (max-width: 768px) {
-  #about .container {
-    flex-direction: column;
-  }
-}
 #about .about-content {
   flex: 3;
   text-align: start;
@@ -101,11 +81,6 @@ header nav .nav-links li a:hover {
   font-size: 75px;
   margin-left: -2px;
 }
-@media (max-width: 768px) {
-  #about .about-content {
-    padding: 1rem;
-  }
-}
 #about .about-photo {
   flex: 2;
   display: flex;
@@ -115,7 +90,6 @@ header nav .nav-links li a:hover {
 #about .about-photo .profile-photo {
   max-width: 300px;
   width: 100%;
-  border-radius: 50%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -251,4 +225,77 @@ header nav .nav-links li a:hover {
 }
 #contact .container .container-contact .contact-item a {
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    position: relative;
+  }
+  header .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav .menu-toggle {
+    display: block;
+  }
+  header nav .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem 0;
+  }
+  header nav .nav-links li {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  header nav .nav-links.active {
+    display: flex;
+  }
+  #about .container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  #about .about-photo {
+    order: -1;
+    margin-bottom: 1rem;
+  }
+  #about .about-content {
+    text-align: center;
+  }
+  .about-photo {
+    width: 200px;
+    padding-top: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    padding: 0.5rem 0;
+  }
+  header .logo {
+    font-size: 1.2rem;
+  }
+  header nav .nav-links li {
+    margin: 0.5rem 0;
+  }
+  #technologies .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  #projects .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  #contact .container-contact {
+    flex-direction: column;
+    align-items: center;
+  }
+  #contact .container-contact .contact-item {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */

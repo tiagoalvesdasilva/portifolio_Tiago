@@ -45,3 +45,13 @@ document.addEventListener("DOMContentLoaded", function () {
         offset: 200, // Distância em pixels para disparar a animação
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', function () {
+        navLinks.classList.toggle('active');
+    });
+});
