@@ -237,6 +237,7 @@ header nav .nav-links li a:hover {
   width: 300px;
   height: auto;
   padding: 25px;
+  transition: transform 0.3s;
 }
 #contact .container .container-contact .contact-item:hover {
   transform: translateY(-10px);

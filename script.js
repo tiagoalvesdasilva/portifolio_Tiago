@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll('.nav-links a'); // Seleciona todos os links do menu
+    const links = document.querySelectorAll('.nav-links a'); 
+    // Seleciona todos os links do menu
 
     links.forEach(link => {
         link.addEventListener('click', function (event) {
-            event.preventDefault(); // Evita o comportamento padrão de pular diretamente para o elemento
+            event.preventDefault(); 
+            // Evita o comportamento padrão de pular diretamente para o elemento
             const targetId = this.getAttribute('href').substring(1); // Obtém o ID do destino (remove o #)
             const targetElement = document.getElementById(targetId); // Seleciona o elemento correspondente
 
