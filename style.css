@@ -271,31 +271,51 @@ header nav .nav-links li a:hover {
     width: 200px;
     padding-top: 2rem;
   }
-}
-@media (max-width: 480px) {
-  header {
-    padding: 0.5rem 0;
+  .contact-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
   }
-  header .logo {
-    font-size: 1.2rem;
-  }
-  header nav .nav-links li {
-    margin: 0.5rem 0;
-  }
-  #technologies .tech-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  #projects .projects-grid {
-    grid-template-columns: 1fr;
-  }
-  #contact .container-contact {
+  .contact-section .container-contact {
     flex-direction: column;
     align-items: center;
   }
-  #contact .container-contact .contact-item {
-    width: 100%;
-    padding: 1rem;
-    text-align: center;
+  .contact-section .container-contact .contact-item {
+    width: 90%;
+  }
+  .contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  .contact-section .container-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .contact-section .container-contact .contact-item {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 220px;
+    transition: transform 0.3s ease;
+  }
+  .contact-section .container-contact .contact-item:hover {
+    transform: translateY(-5px);
+  }
+  .contact-section .container-contact .contact-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+  .contact-section .container-contact .contact-item p {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.4;
+  }
+  .contact-section .container-contact .contact-item p strong {
+    display: block;
   }
 }/*# sourceMappingURL=style.css.map */
