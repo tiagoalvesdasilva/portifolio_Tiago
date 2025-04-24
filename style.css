@@ -263,13 +263,60 @@ header nav .nav-links li a:hover {
   #about .about-photo {
     order: -1;
     margin-bottom: 1rem;
+    width: 200px;
+    padding-top: 2rem;
   }
   #about .about-content {
     text-align: center;
   }
-  .about-photo {
-    width: 200px;
-    padding-top: 2rem;
+  .projects-section {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .projects-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  .projects-section .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  .projects-section .projects-grid .project-item {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease;
+  }
+  .projects-section .projects-grid .project-item:hover {
+    transform: translateY(-5px);
+  }
+  .projects-section .projects-grid .project-item a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+  .projects-section .projects-grid .project-item a img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .projects-section .projects-grid .project-item a .project-content {
+    padding: 15px;
+  }
+  .projects-section .projects-grid .project-item a .project-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  .projects-section .projects-grid .project-item a .project-content p {
+    font-size: 0.95rem;
+    color: #555;
   }
   .contact-section {
     padding: 60px 20px;
