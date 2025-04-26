@@ -304,22 +304,86 @@ header {
         }
     }
 
-    #about{
+    .about-section {
+        background-color: #ffffff;
+        padding: 60px 20px;
+      
         .container {
-            flex-direction: column;
-            padding: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+
         }
+      
+      
         .about-photo {
-            order: -1;
-            margin-bottom: 1rem;
-            width: 200px;
-            padding-top: 2rem;
-        }
-        .about-content {
-            text-align: center;
+          flex: 1;
+          min-width: 250px;
+          display: flex;
+          justify-content: center;
+      
+          .profile-photo {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+          }
         }
     }
 
+    .technologies-section {
+        background-color: #ffffff;
+        padding: 60px 20px;
+        text-align: center;
+      
+        h2 {
+          font-size: 2rem;
+          margin-bottom: 40px;
+          color: #333333;
+        }
+        
+        .container {
+            padding: 0 40px;
+          }
+        .tech-grid {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 20px;
+      
+          .tech-item {
+            background-color: #f9f9f9;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            width: 100px;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+      
+            &:hover {
+              transform: scale(1.05);
+            }
+      
+            img {
+              width: 40px;
+              height: 40px;
+              margin-bottom: 10px;
+              object-fit: contain;
+            }
+      
+            span {
+              font-size: 0.9rem;
+              color: #666666;
+              font-weight: 500;
+            }
+          }
+        }
+    }
     .projects-section {
         background-color: #f4f4f4;
         padding: 60px 20px;

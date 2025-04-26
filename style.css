@@ -256,18 +256,73 @@ header nav .nav-links li a:hover {
   header nav .nav-links.active {
     display: flex;
   }
-  #about .container {
-    flex-direction: column;
-    padding: 1rem;
+  .about-section {
+    background-color: #ffffff;
+    padding: 60px 20px;
   }
-  #about .about-photo {
-    order: -1;
-    margin-bottom: 1rem;
-    width: 200px;
-    padding-top: 2rem;
+  .about-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
-  #about .about-content {
+  .about-section .about-photo {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    justify-content: center;
+  }
+  .about-section .about-photo .profile-photo {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  .technologies-section {
+    background-color: #ffffff;
+    padding: 60px 20px;
     text-align: center;
+  }
+  .technologies-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333333;
+  }
+  .technologies-section .container {
+    padding: 0 40px;
+  }
+  .technologies-section .tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .technologies-section .tech-grid .tech-item {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 100px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  .technologies-section .tech-grid .tech-item:hover {
+    transform: scale(1.05);
+  }
+  .technologies-section .tech-grid .tech-item img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    object-fit: contain;
+  }
+  .technologies-section .tech-grid .tech-item span {
+    font-size: 0.9rem;
+    color: #666666;
+    font-weight: 500;
   }
   .projects-section {
     background-color: #f4f4f4;
