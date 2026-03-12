@@ -48,7 +48,7 @@ header nav .nav-links li a:hover {
   color: #007bff;
 }
 
-#about {
+.about-section {
   background-color: #f9f9f9;
   height: 100vh;
   display: flex;
@@ -57,7 +57,7 @@ header nav .nav-links li a:hover {
   text-align: center;
   padding: 0;
 }
-#about .container {
+.about-section .container {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -65,29 +65,29 @@ header nav .nav-links li a:hover {
   height: 100%;
   max-width: none;
 }
-#about .about-content {
+.about-section .about-content {
   flex: 3;
   text-align: start;
 }
-#about .about-content p {
+.about-section .about-content p {
   line-height: 1.5;
   color: #000;
   max-width: 600px;
   font-size: 27px;
   margin: 0 auto;
 }
-#about .about-content p span {
+.about-section .about-content p span {
   font-weight: 600;
   font-size: 75px;
   margin-left: -2px;
 }
-#about .about-photo {
+.about-section .about-photo {
   flex: 2;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#about .about-photo .profile-photo {
+.about-section .about-photo .profile-photo {
   max-width: 300px;
   width: 100%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -257,7 +257,6 @@ header nav .nav-links li a:hover {
     display: flex;
   }
   .about-section {
-    background-color: #ffffff;
     padding: 60px 20px;
   }
   .about-section .container {
@@ -266,15 +265,21 @@ header nav .nav-links li a:hover {
     justify-content: space-between;
     flex-wrap: wrap;
   }
+  .about-section .container .about-content p {
+    color: blue;
+  }
+  .about-section .container .about-content p span {
+    font-size: 35px;
+  }
   .about-section .about-photo {
     flex: 1;
-    min-width: 250px;
+    min-width: 180px;
     display: flex;
     justify-content: center;
   }
   .about-section .about-photo .profile-photo {
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 300px;
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
@@ -373,17 +378,17 @@ header nav .nav-links li a:hover {
     font-size: 0.95rem;
     color: #555;
   }
-  .contact-section {
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-  }
   .contact-section .container-contact {
     flex-direction: column;
     align-items: center;
   }
   .contact-section .container-contact .contact-item {
     width: 90%;
+  }
+  .contact-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
   }
   .contact-section h2 {
     font-size: 2rem;

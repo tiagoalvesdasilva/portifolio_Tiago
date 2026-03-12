@@ -60,7 +60,7 @@ header {
     }
 }
 
-#about {
+.about-section {
     background-color: #f9f9f9;
     height: 100vh;
     display: flex;
@@ -305,7 +305,6 @@ header {
     }
 
     .about-section {
-        background-color: #ffffff;
         padding: 60px 20px;
       
         .container {
@@ -314,18 +313,28 @@ header {
           justify-content: space-between;
           flex-wrap: wrap;
 
+          .about-content{
+            p {
+                color: blue;
+                
+                span{
+                    font-size: 35px;
+                }
+            }
+          }
+
         }
       
       
         .about-photo {
           flex: 1;
-          min-width: 250px;
+          min-width: 180px;
           display: flex;
           justify-content: center;
       
           .profile-photo {
-            width: 400px;
-            height: 400px;
+            width: 200px;
+            height: 300px;
             object-fit: cover;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
           }
