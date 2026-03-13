@@ -1,4 +1,4 @@
-$primary-color: #333;
+$primary-color: #81df64;
 $secondary-color: #fff;
 $accent-color: #007bff;
 
@@ -34,8 +34,31 @@ header {
     }
 
     nav {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        /* BOTÃO HAMBURGER */
+
         .menu-toggle {
             display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 22px;
+            background: none;
+            border: none;
+            cursor: pointer;
+
+            span {
+            width: 100%;
+            height: 3px;
+            background: #12571b;
+            border-radius: 2px;
+            transition: 0.3s;
+            }
         }
         .nav-links {
             display: flex;
@@ -276,30 +299,52 @@ header {
         }
 
         nav {
-            .menu-toggle {
-                display: block;
+           .menu-toggle {
+                display: flex;
+                z-index: 1002;
             }
-
             .nav-links {
-                display: none;
+                display: flex;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                position: fixed;
+                top: 0px;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background: white;
                 flex-direction: column;
-                background-color: $primary-color;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                padding: 1rem 0;
-
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                transition: 0.4s;
+                z-index: 1001;
                 li {
-                    margin: 1rem 0;
-                    text-align: center;
+                    margin: 10px 0;
                 }
             }
-
             .nav-links.active {
-                display: flex;
+                border: none;
+                right: 0;
+                background-color: #007bff;
+                li a{
+                    color: rgb(22, 22, 22);
+                    text-decoration: none;
+                }
             }
         }
+        .menu-toggle.active span:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
+        }        
     }
 
     .about-section {
