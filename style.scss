@@ -272,9 +272,7 @@ header {
     header {
         position: relative;
         .container {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
+            height: 20px;
         }
 
         nav {
@@ -305,22 +303,17 @@ header {
     }
 
     .about-section {
+        background-color: #ffffff;
         padding: 60px 20px;
       
         .container {
           display: flex;
           align-items: center;
           justify-content: space-between;
+          flex-direction: column-reverse;
           flex-wrap: wrap;
-
-          .about-content{
-            p {
-                color: blue;
-                
-                span{
-                    font-size: 35px;
-                }
-            }
+          p{
+            color: red;
           }
 
         }
@@ -328,16 +321,17 @@ header {
       
         .about-photo {
           flex: 1;
-          min-width: 180px;
+          min-width: 250px;
           display: flex;
           justify-content: center;
       
           .profile-photo {
             width: 200px;
-            height: 300px;
+            height: 200px;
             object-fit: cover;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
           }
+        
         }
     }
 
