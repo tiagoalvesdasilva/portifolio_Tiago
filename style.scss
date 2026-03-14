@@ -137,7 +137,7 @@ header {
     }
 }
 
-#technologies {
+.technologies-section {
     background-color: #ffffff;
     padding: 3rem 0;
 
@@ -353,7 +353,7 @@ header {
     }
 
     .about-section {
-        background-color: #ffffff;
+        background-color: #7c4949;
         padding-top: 65px;
         height: 70vh;      
         .container {
@@ -367,9 +367,9 @@ header {
           }
           p{
             color: red;
-            font-size: 20px;
+            font-size: 27px;
             span{
-                font-size: 40px;
+                font-size: 27px;
             }
           }
 
@@ -393,8 +393,8 @@ header {
     }
 
     .technologies-section {
-        background-color: #ffffff;
-        text-align: center;
+        background-color: #3bc55d;
+        
       
         h2 {
           font-size: 2rem;
@@ -444,7 +444,7 @@ header {
         }
     }
     .projects-section {
-        background-color: #f4f4f4;
+        background-color: #1b10b6;
         padding: 60px 20px;
         text-align: center;
       

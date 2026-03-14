@@ -119,35 +119,35 @@ header nav .nav-links li a:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#technologies {
+.technologies-section {
   background-color: #ffffff;
   padding: 3rem 0;
 }
-#technologies .container {
+.technologies-section .container {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
 }
-#technologies .container h2 {
+.technologies-section .container h2 {
   font-size: 2.5rem;
   color: #333;
   margin-bottom: 2rem;
 }
-#technologies .container .tech-grid {
+.technologies-section .container .tech-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 2rem;
 }
-#technologies .container .tech-grid .tech-item {
+.technologies-section .container .tech-grid .tech-item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#technologies .container .tech-grid .tech-item img {
+.technologies-section .container .tech-grid .tech-item img {
   max-width: 80px;
   margin-bottom: 1rem;
 }
-#technologies .container .tech-grid .tech-item span {
+.technologies-section .container .tech-grid .tech-item span {
   font-size: 1rem;
   color: #333;
 }
@@ -307,7 +307,7 @@ header nav .nav-links li a:hover {
     transform: translateY(-9px) rotate(-45deg);
   }
   .about-section {
-    background-color: #ffffff;
+    background-color: #7c4949;
     padding-top: 65px;
     height: 70vh;
   }
@@ -323,10 +323,10 @@ header nav .nav-links li a:hover {
   }
   .about-section .container p {
     color: red;
-    font-size: 20px;
+    font-size: 27px;
   }
   .about-section .container p span {
-    font-size: 40px;
+    font-size: 27px;
   }
   .about-section .about-photo {
     flex: 1;
@@ -341,8 +341,7 @@ header nav .nav-links li a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
   .technologies-section {
-    background-color: #ffffff;
-    text-align: center;
+    background-color: #3bc55d;
   }
   .technologies-section h2 {
     font-size: 2rem;
@@ -386,7 +385,7 @@ header nav .nav-links li a:hover {
     font-weight: 500;
   }
   .projects-section {
-    background-color: #f4f4f4;
+    background-color: #1b10b6;
     padding: 60px 20px;
     text-align: center;
   }
