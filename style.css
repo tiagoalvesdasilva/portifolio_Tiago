@@ -1,4 +1,8 @@
 @charset "UTF-8";
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -251,7 +255,10 @@ header nav .nav-links li a:hover {
 
 @media (max-width: 768px) {
   header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
   }
   header .container {
     height: 20px;
@@ -301,7 +308,8 @@ header nav .nav-links li a:hover {
   }
   .about-section {
     background-color: #ffffff;
-    padding: 60px 20px;
+    padding-top: 65px;
+    height: 70vh;
   }
   .about-section .container {
     display: flex;
@@ -310,8 +318,15 @@ header nav .nav-links li a:hover {
     flex-direction: column-reverse;
     flex-wrap: wrap;
   }
+  .about-section .container .about-content {
+    margin-top: 20px;
+  }
   .about-section .container p {
     color: red;
+    font-size: 20px;
+  }
+  .about-section .container p span {
+    font-size: 40px;
   }
   .about-section .about-photo {
     flex: 1;
@@ -327,7 +342,6 @@ header nav .nav-links li a:hover {
   }
   .technologies-section {
     background-color: #ffffff;
-    padding: 60px 20px;
     text-align: center;
   }
   .technologies-section h2 {

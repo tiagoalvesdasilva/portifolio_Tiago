@@ -1,7 +1,9 @@
 $primary-color: #81df64;
 $secondary-color: #fff;
 $accent-color: #007bff;
-
+*{
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -293,7 +295,10 @@ header {
 
 @media (max-width: 768px) {
     header {
-        position: relative;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
         .container {
             height: 20px;
         }
@@ -349,16 +354,23 @@ header {
 
     .about-section {
         background-color: #ffffff;
-        padding: 60px 20px;
-      
+        padding-top: 65px;
+        height: 70vh;      
         .container {
           display: flex;
           align-items: center;
           justify-content: space-between;
           flex-direction: column-reverse;
           flex-wrap: wrap;
+          .about-content{
+            margin-top: 20px;
+          }
           p{
             color: red;
+            font-size: 20px;
+            span{
+                font-size: 40px;
+            }
           }
 
         }
@@ -382,7 +394,6 @@ header {
 
     .technologies-section {
         background-color: #ffffff;
-        padding: 60px 20px;
         text-align: center;
       
         h2 {

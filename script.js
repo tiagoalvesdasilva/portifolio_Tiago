@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+/*document.addEventListener("DOMContentLoaded", function () {
     const links = document.querySelectorAll('.nav-links a'); 
     // Seleciona todos os links do menu
 
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-});
+}); */
 
 
 document.addEventListener("DOMContentLoaded", function () {
