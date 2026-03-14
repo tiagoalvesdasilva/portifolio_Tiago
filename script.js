@@ -49,14 +49,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const links = document.querySelectorAll('.nav-links a');
 
-menuToggle.addEventListener('click', () => {
+  // abrir/fechar pelo botão
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
 
-menuToggle.classList.toggle('active');
-navLinks.classList.toggle('active');
-
-});
+  // 🔥 FECHAR AO CLICAR EM UM ITEM
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      menuToggle.classList.remove('active');
+      navLinks.classList.remove('active');
+    });
+  });
 
 });
