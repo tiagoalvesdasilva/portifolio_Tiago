@@ -6,18 +6,21 @@
   box-sizing: border-box;
 }
 
-body {
+body, html {
   margin: 0;
   font-family: Arial, sans-serif;
   height: 100%;
+  background-color: #0B1F2A;
+  color: #EAF4F4;
 }
 
 header {
-  background-color: #002333;
-  color: #fff;
+  background-color: #123647;
   padding: 1rem 0;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
 }
 header .container {
@@ -52,7 +55,7 @@ header nav .menu-toggle {
 header nav .menu-toggle span {
   width: 100%;
   height: 3px;
-  background: #12571b;
+  background: #19E3D5;
   border-radius: 2px;
   transition: 0.3s;
 }
@@ -66,22 +69,22 @@ header nav .nav-links li {
   margin: 0 1rem;
 }
 header nav .nav-links li a {
-  color: #fff;
+  color: #EAF4F4;
   text-decoration: none;
   font-weight: bold;
 }
 header nav .nav-links li a:hover {
-  color: #007bff;
+  color: #19E3D5;
 }
 
 .about-section {
-  background-color: #f9f9f9;
-  height: 100vh;
+  background-color: #0B1F2A;
+  margin-top: 80px;
+  min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0;
 }
 .about-section .container {
   display: flex;
@@ -97,7 +100,7 @@ header nav .nav-links li a:hover {
 }
 .about-section .about-content p {
   line-height: 1.5;
-  color: #000;
+  color: #EAF4F4;
   max-width: 600px;
   font-size: 27px;
   margin: 0 auto;
@@ -106,6 +109,7 @@ header nav .nav-links li a:hover {
   font-weight: 600;
   font-size: 75px;
   margin-left: -2px;
+  color: #19E3D5;
 }
 .about-section .about-photo {
   flex: 2;
@@ -120,7 +124,7 @@ header nav .nav-links li a:hover {
 }
 
 .technologies-section {
-  background-color: #ffffff;
+  background-color: #123647;
   padding: 3rem 0;
 }
 .technologies-section .container {
@@ -130,7 +134,7 @@ header nav .nav-links li a:hover {
 }
 .technologies-section .container h2 {
   font-size: 2.5rem;
-  color: #333;
+  color: #19E3D5;
   margin-bottom: 2rem;
 }
 .technologies-section .container .tech-grid {
@@ -149,11 +153,11 @@ header nav .nav-links li a:hover {
 }
 .technologies-section .container .tech-grid .tech-item span {
   font-size: 1rem;
-  color: #333;
+  color: #6B8A96;
 }
 
 #projects {
-  background-color: #f4f4f4;
+  background-color: #0B1F2A;
   padding: 5rem;
 }
 #projects .container {
@@ -163,7 +167,7 @@ header nav .nav-links li a:hover {
 }
 #projects .container h2 {
   font-size: 2.5rem;
-  color: #333;
+  color: #19E3D5;
   margin-bottom: 3rem;
 }
 #projects .container .projects-grid {
@@ -172,8 +176,8 @@ header nav .nav-links li a:hover {
   gap: 2rem;
 }
 #projects .container .projects-grid .project-item {
-  background: #fff;
-  border: 1px solid #ddd;
+  background: #123647;
+  border: 1px solid #6B8A96;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -195,15 +199,15 @@ header nav .nav-links li a:hover {
 #projects .container .projects-grid .project-item .project-content h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: #EAF4F4;
 }
 #projects .container .projects-grid .project-item .project-content p {
   font-size: 1rem;
-  color: #666;
+  color: #6B8A96;
 }
 
 #contact {
-  background-color: #f9f9f9;
+  background-color: #123647;
   padding: 80px 20px;
 }
 #contact .container {
@@ -211,17 +215,20 @@ header nav .nav-links li a:hover {
   margin: 0 auto;
   text-align: center;
 }
+#contact .container h2 {
+  color: #19E3D5;
+}
 #contact .container .container-contact {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin-top: 50px;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: transparent;
 }
 #contact .container .container-contact .contact-item {
   width: 300px;
   height: 150px;
+  background-color: #0B1F2A;
   transition: transform 0.3s ease;
   border-radius: 12px;
   box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.1);
@@ -235,7 +242,7 @@ header nav .nav-links li a:hover {
   height: 50px;
 }
 #contact .container .container-contact .contact-item p {
-  color: #000;
+  color: #EAF4F4;
 }
 #contact .container .container-contact .contact-item a {
   text-decoration: none;
@@ -243,7 +250,6 @@ header nav .nav-links li a:hover {
 
 @media (max-width: 768px) {
   header {
-    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -295,12 +301,11 @@ header nav .nav-links li a:hover {
     transform: translateY(-9px) rotate(-45deg);
   }
   .about-section {
-    background-color: #5FCDD9;
-    margin-top: 80px;
-    min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 80px;
+    min-height: calc(100vh - 80px);
   }
   .about-section .container {
     display: flex;
@@ -310,7 +315,6 @@ header nav .nav-links li a:hover {
     text-align: center;
   }
   .about-section .container p {
-    color: black;
     font-size: 27px;
   }
   .about-section .container p span {
@@ -328,13 +332,9 @@ header nav .nav-links li a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     margin-bottom: 50px;
   }
-  .technologies-section {
-    background-color: #3bc55d;
-  }
   .technologies-section h2 {
     font-size: 2rem;
     margin-bottom: 40px;
-    color: #333333;
   }
   .technologies-section .container {
     padding: 0 40px;
@@ -346,7 +346,6 @@ header nav .nav-links li a:hover {
     gap: 20px;
   }
   .technologies-section .tech-grid .tech-item {
-    background-color: #f9f9f9;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px;
@@ -369,18 +368,15 @@ header nav .nav-links li a:hover {
   }
   .technologies-section .tech-grid .tech-item span {
     font-size: 0.9rem;
-    color: #666666;
     font-weight: 500;
   }
   .projects-section {
-    background-color: #1b10b6;
     padding: 60px 20px;
     text-align: center;
   }
   .projects-section h2 {
     font-size: 2rem;
     margin-bottom: 40px;
-    color: #333;
   }
   .projects-section .projects-grid {
     display: flex;
@@ -389,7 +385,6 @@ header nav .nav-links li a:hover {
     gap: 30px;
   }
   .projects-section .projects-grid .project-item {
-    background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -415,57 +410,51 @@ header nav .nav-links li a:hover {
   .projects-section .projects-grid .project-item a .project-content h3 {
     font-size: 1.25rem;
     margin-bottom: 10px;
-    color: #333;
   }
   .projects-section .projects-grid .project-item a .project-content p {
     font-size: 0.95rem;
-    color: #555;
   }
-  .contact-section .container-contact {
+  #contact .container-contact {
     flex-direction: column;
     align-items: center;
   }
-  .contact-section .container-contact .contact-item {
+  #contact .container-contact .contact-item {
     width: 90%;
   }
-  .contact-section {
+  #contact {
     padding: 60px 20px;
-    background-color: #f9f9f9;
     text-align: center;
   }
-  .contact-section h2 {
+  #contact h2 {
     font-size: 2rem;
     margin-bottom: 40px;
-    color: #333;
   }
-  .contact-section .container-contact {
+  #contact .container-contact {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
   }
-  .contact-section .container-contact .contact-item {
-    background-color: #fff;
+  #contact .container-contact .contact-item {
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 220px;
     transition: transform 0.3s ease;
   }
-  .contact-section .container-contact .contact-item:hover {
+  #contact .container-contact .contact-item:hover {
     transform: translateY(-5px);
   }
-  .contact-section .container-contact .contact-item img {
+  #contact .container-contact .contact-item img {
     width: 50px;
     height: 50px;
     margin-bottom: 15px;
   }
-  .contact-section .container-contact .contact-item p {
+  #contact .container-contact .contact-item p {
     font-size: 0.95rem;
-    color: #444;
     line-height: 1.4;
   }
-  .contact-section .container-contact .contact-item p strong {
+  #contact .container-contact .contact-item p strong {
     display: block;
   }
 }/*# sourceMappingURL=style.css.map */
