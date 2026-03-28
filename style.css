@@ -1,16 +1,19 @@
 @charset "UTF-8";
 * {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  height: 100%;
 }
 
 header {
-  background-color: #81df64;
+  background-color: #002333;
   color: #fff;
   padding: 1rem 0;
   position: fixed;
@@ -76,7 +79,8 @@ header nav .nav-links li a:hover {
 
 .about-section {
   background-color: #f9f9f9;
-  height: 100vh;
+  margin-top: 80px;
+  min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -307,19 +311,19 @@ header nav .nav-links li a:hover {
     transform: translateY(-9px) rotate(-45deg);
   }
   .about-section {
-    background-color: #7c4949;
-    padding-top: 65px;
-    height: 70vh;
+    background-color: #FFFFFF;
+    margin-top: 80px;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .about-section .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     flex-direction: column-reverse;
-    flex-wrap: wrap;
-  }
-  .about-section .container .about-content {
-    margin-top: 20px;
+    gap: 20px;
+    text-align: center;
   }
   .about-section .container p {
     color: red;
@@ -329,14 +333,13 @@ header nav .nav-links li a:hover {
     font-size: 27px;
   }
   .about-section .about-photo {
-    flex: 1;
-    min-width: 250px;
     display: flex;
     justify-content: center;
   }
   .about-section .about-photo .profile-photo {
     width: 200px;
     height: 200px;
+    border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
