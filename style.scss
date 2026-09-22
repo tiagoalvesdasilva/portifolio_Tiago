@@ -375,28 +375,103 @@ header {
             margin-bottom: 3rem;
         }
 
+        .featured-project {
+            display: flex;
+            align-items: stretch;
+            gap: 2.5rem;
+            background: $bg-main;
+            border: 1px solid rgba($accent, 0.2);
+            border-radius: $radius;
+            box-shadow: $shadow;
+            overflow: hidden;
+            margin-bottom: 3.5rem;
+            text-align: left;
+
+        .featured-img {
+            flex: 1;
+            min-height: 320px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .featured-content {
+            flex: 1;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .featured-label {
+                color: $accent;
+                font-weight: 600;
+                font-size: 0.8rem;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                margin-bottom: 0.6rem;
+            }
+
+            h3 {
+                font-size: 1.8rem;
+                margin-bottom: 1.2rem;
+                color: $text-main;
+            }
+
+            .featured-case {
+                font-size: 0.95rem;
+                line-height: 1.6;
+                color: $text-soft;
+                margin-bottom: 0.8rem;
+
+                strong { color: $text-main; }
+            }
+
+            .project-tags {
+                margin: 1rem 0 1.5rem;
+            }
+
+            .btn { align-self: flex-start; }
+        }
+    }
+
+        .other-projects-title {
+            font-size: 1.3rem;
+            color: $text-soft;
+            text-align: left;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
 
+            
             .project-item {
                 background: $bg-main;
                 border: 1px solid rgba($text-soft, 0.15);
                 border-radius: $radius;
                 box-shadow: $shadow;
                 overflow: hidden;
-                transition: transform $transition, border-color $transition;
+                transition: transform 0.15s ease, border-color $transition, box-shadow $transition;
                 text-align: left;
+                transform-style: preserve-3d;
+                will-change: transform;
 
                 a { text-decoration: none; color: inherit; display: block; }
 
                 &:hover {
-                    transform: translateY(-8px);
-                    border-color: rgba($accent, 0.35);
+                    border-color: rgba($accent, 0.5);
+                    box-shadow: 0 15px 35px rgba($accent, 0.15), $shadow;
                 }
 
                 .project-img {
+                    position: relative;
                     width: 100%;
                     height: 200px;
                     overflow: hidden;
@@ -405,13 +480,30 @@ header {
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
-                        transition: transform 0.4s ease;
+                        transition: transform 0.5s ease;
+                    }
+
+                    .project-overlay {
+                        position: absolute;
+                        inset: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 0.5rem;
+                        background: linear-gradient(0deg, rgba($bg-main, 0.92) 0%, rgba($bg-main, 0.4) 60%, transparent 100%);
+                        color: $accent;
+                        font-weight: 600;
+                        font-size: 0.95rem;
+                        transform: translateY(100%);
+                        transition: transform 0.35s ease;
+
+                        svg { transition: transform 0.35s ease; }
                     }
                 }
 
-                &:hover .project-img img {
-                    transform: scale(1.06);
-                }
+                &:hover .project-img img { transform: scale(1.08); }
+                &:hover .project-overlay { transform: translateY(0); }
+                &:hover .project-overlay svg { transform: translateX(4px); }
 
                 .project-content {
                     padding: 1.3rem;
@@ -445,6 +537,7 @@ header {
                     }
                 }
             }
+
         }
     }
 }
