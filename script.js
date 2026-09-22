@@ -1,70 +1,44 @@
-/*document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll('.nav-links a'); 
-    // Seleciona todos os links do menu
-
-    links.forEach(link => {
-        link.addEventListener('click', function (event) {
-            event.preventDefault(); 
-            // Evita o comportamento padrão de pular diretamente para o elemento
-            const targetId = this.getAttribute('href').substring(1); // Obtém o ID do destino (remove o #)
-            const targetElement = document.getElementById(targetId); // Seleciona o elemento correspondente
-
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop,
-                    behavior: 'smooth' // Rola suavemente até o elemento
-                });
-            }
-        });
-    });
-}); */
-
-
 document.addEventListener("DOMContentLoaded", function () {
+    // Efeito de digitação (sem "flash" do texto original)
     const text = "Desenvolvedor Front-End";
-    const target = document.querySelector(".about-content p:nth-of-type(2)"); // Seleciona o segundo <p>
+    const target = document.getElementById("typed-role");
     let index = 0;
 
     function typeEffect() {
         if (index < text.length) {
             target.textContent += text[index];
             index++;
-            setTimeout(typeEffect, 100);
+            setTimeout(typeEffect, 90);
         }
     }
-
-    target.textContent = "";
     typeEffect();
-});
 
-document.addEventListener("DOMContentLoaded", function () {
+    // Ano dinâmico no rodapé
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // AOS
     AOS.init({
-        duration: 1200, // Duração da animação em milissegundos
-        easing: 'ease-in-out', // Estilo da animação
-        once: false, // A animação acontece apenas uma vez ao rolar a página
-        offset: 200, // Distância em pixels para disparar a animação
+        duration: 1000,
+        easing: "ease-in-out",
+        once: false,
+        offset: 150,
     });
-});
 
+    // Menu mobile
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    const links = document.querySelectorAll(".nav-links a");
 
-document.addEventListener('DOMContentLoaded', () => {
-
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  const links = document.querySelectorAll('.nav-links a');
-
-  // abrir/fechar pelo botão
-  menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
-    navLinks.classList.toggle('active');
-  });
-
-  // 🔥 FECHAR AO CLICAR EM UM ITEM
-  links.forEach(link => {
-    link.addEventListener('click', () => {
-      menuToggle.classList.remove('active');
-      navLinks.classList.remove('active');
+    menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        navLinks.classList.toggle("active");
     });
-  });
 
+    links.forEach(link => {
+        link.addEventListener("click", () => {
+            menuToggle.classList.remove("active");
+            navLinks.classList.remove("active");
+        });
+    });
 });

@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Tiago Alves — Desenvolvedor Front-End especializado em HTML, CSS, JavaScript, TypeScript e Angular.">
+    <title>Tiago Alves | Desenvolvedor Front-End</title>
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-    <header id="main-header" data-aos="fade-down">
+
+    <header id="main-header">
         <div class="container">
-            <h1 class="logo">Meu Portfólio</h1>
+            <h1 class="logo">Tiago<span>.dev</span></h1>
             <nav>
                 <button class="menu-toggle" aria-label="Abrir menu">
                     <span></span>
@@ -20,46 +27,59 @@
                 </button>
                 <ul class="nav-links">
                     <li><a href="#about">Sobre</a></li>
+                    <li><a href="#technologies">Tecnologias</a></li>
                     <li><a href="#projects">Projetos</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <section id="about" class="about-section" data-aos="fade-up">
         <div class="container">
             <div class="about-content">
-                <p>Olá, Meu nome é <br> <span>Tiago Alves</span></p>
-                <p>Desenvolvedor Front-End</p>
+                <p class="eyebrow">Olá, meu nome é</p>
+                <h2 class="hero-name">Tiago Alves</h2>
+                <p class="hero-role"><span id="typed-role"></span><span class="cursor">|</span></p>
+
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+                    <a href="#contact" class="btn btn-outline">Falar Comigo</a>
+                </div>
+
+                <div class="hero-socials">
+                    <a href="https://github.com/tiagoalvesdasilva" target="_blank" aria-label="GitHub">
+                        <img src="src/contato/github-brands-solid.png" alt="GitHub">
+                    </a>
+                    <a href="https://www.linkedin.com/in/tiago-alvesdasilva/" target="_blank" aria-label="LinkedIn">
+                        <img src="src/contato/linkedin-brands-solid.png" alt="LinkedIn">
+                    </a>
+                </div>
             </div>
+
             <div class="about-photo">
                 <picture>
-                  <source srcset="src/tecnologias/tiago_pequena.jpeg" media="(max-width: 768px)">
-
-                  <img src="src/tecnologias/foto tiago.jpeg" alt="Minha Foto" class="profile-photo">
+                    <source srcset="src/tecnologias/tiago-pequena.jpeg" media="(max-width: 768px)">
+                    <img src="src/tecnologias/foto-tiago.jpeg" alt="Foto de Tiago Alves" class="profile-photo">
                 </picture>
-              </div>
-              
+            </div>
         </div>
     </section>
 
     <section class="about-me-section" data-aos="fade-up">
         <div class="container">
             <h2>Sobre mim</h2>
-
             <div class="about-me-content">
                 <p>
                     Sou um desenvolvedor Front-End apaixonado por transformar ideias em interfaces modernas,
                     funcionais e bem estruturadas. Tenho foco em criar experiências agradáveis para o usuário
                     utilizando boas práticas de desenvolvimento e código limpo.
                 </p>
-
                 <p>
                     Trabalho principalmente com <strong>HTML, CSS, JavaScript, TypeScript e Angular</strong>,
                     sempre buscando evoluir tecnicamente e aplicar conceitos de performance,
                     responsividade e organização de projetos.
                 </p>
-
                 <p>
                     Gosto de desafios que me façam aprender algo novo e estou em constante evolução
                     para me tornar um profissional cada vez mais completo na área de tecnologia.
@@ -67,84 +87,115 @@
             </div>
         </div>
     </section>
-    
-    <section id="technologies" class="technologies-section" >
+
+    <section id="technologies" class="technologies-section">
         <div class="container">
             <h2>Tecnologias</h2>
             <div class="tech-grid">
                 <div class="tech-item" data-aos="flip-left">
-                    <img src="src/tecnologias/html (1).png" alt="HTML">
+                    <img src="src/tecnologias/html (1).png" alt="HTML" loading="lazy">
                     <span>HTML</span>
                 </div>
                 <div class="tech-item" data-aos="flip-left">
-                    <img src="src/tecnologias/css.png" alt="CSS">
+                    <img src="src/tecnologias/css.png" alt="CSS" loading="lazy">
                     <span>CSS</span>
                 </div>
                 <div class="tech-item" data-aos="flip-left">
-                    <img src="src/tecnologias/js.png" alt="JavaScript">
+                    <img src="src/tecnologias/js.png" alt="JavaScript" loading="lazy">
                     <span>JavaScript</span>
                 </div>
                 <div class="tech-item" data-aos="flip-left">
-                    <img src="src/tecnologias/typescript.png" alt="TypeScript">
+                    <img src="src/tecnologias/typescript.png" alt="TypeScript" loading="lazy">
                     <span>TypeScript</span>
                 </div>
                 <div class="tech-item" data-aos="flip-left">
-                    <img src="src/tecnologias/angular.png" alt="Angular">
+                    <img src="src/tecnologias/angular.png" alt="Angular" loading="lazy">
                     <span>Angular</span>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <section id="projects" class="projects-section">
         <div class="container">
             <h2>Meus Projetos</h2>
             <div class="projects-grid">
-                <div class="project-item" data-aos="zoom-in" data-aos-duration="1500">
+
+                <div class="project-item" data-aos="zoom-in" data-aos-duration="1200">
                     <a href="https://angular-blog-mu.vercel.app/" target="_blank">
-                        <img src="src/projetos/angular-blog.jpg" alt="Projeto 1">
+                        <div class="project-img">
+                            <img src="src/projetos/angular-blog.jpg" alt="Projeto Blog" loading="lazy">
+                        </div>
                         <div class="project-content">
                             <h3>Blog</h3>
-                            <p>Um blog sobre as últimas notícias sobre os animes feito com Angular.</p>
+                            <p>Blog sobre as últimas notícias de animes, feito com Angular.</p>
+                            <div class="project-tags">
+                                <span>Angular</span><span>TypeScript</span>
+                            </div>
                         </div>
                     </a>
                 </div>
-                <div class="project-item" data-aos="zoom-in" data-aos-duration="1500">
+
+                <div class="project-item" data-aos="zoom-in" data-aos-duration="1200">
                     <a href="https://tiagoalvesdasilva.github.io/site_casamento/" target="_blank">
-                        <img src="src/projetos/casamento.jpg" alt="Projeto 2">
+                        <div class="project-img">
+                            <img src="src/projetos/casamento.jpg" alt="Projeto Casamento" loading="lazy">
+                        </div>
                         <div class="project-content">
                             <h3>Casamento</h3>
                             <p>Site feito para o casamento da minha irmã.</p>
+                            <div class="project-tags">
+                                <span>HTML</span><span>CSS</span>
+                            </div>
                         </div>
                     </a>
                 </div>
-                <div class="project-item" data-aos="zoom-in" data-aos-duration="1500">
+
+                <div class="project-item" data-aos="zoom-in" data-aos-duration="1200">
                     <a href="https://tiagoalvesdasilva.github.io/countdown/" target="_blank">
-                        <img src="src/projetos/contagem regressiva .jpg" alt="Projeto 3">
+                        <div class="project-img">
+                            <img src="src/projetos/contagem regressiva .jpg" alt="Projeto Contagem Regressiva" loading="lazy">
+                        </div>
                         <div class="project-content">
-                            <h3>Contagem regressiva</h3>
-                            <p>Uma contagem regressiva até o final do ano.</p>
+                            <h3>Contagem Regressiva</h3>
+                            <p>Contagem regressiva até o final do ano.</p>
+                            <div class="project-tags">
+                                <span>JavaScript</span>
+                            </div>
                         </div>
                     </a>
                 </div>
-                <div class="project-item" data-aos="zoom-in" data-aos-duration="1500">
+
+                <div class="project-item" data-aos="zoom-in" data-aos-duration="1200">
                     <a href="https://tiagoalvesdasilva.github.io/quiz/" target="_blank">
-                        <img src="src/projetos/jogo da velha .jpg" alt="Projeto 4">
+                        <div class="project-img">
+                            <img src="src/projetos/jogo da velha .jpg" alt="Projeto Quiz" loading="lazy">
+                        </div>
                         <div class="project-content">
                             <h3>Quiz</h3>
-                            <p>Projeto feito de Javascript puro, onde eu pego as perguntas e respostas de um Json.</p>
+                            <p>Projeto em JavaScript puro, com perguntas e respostas vindas de um JSON.</p>
+                            <div class="project-tags">
+                                <span>JavaScript</span><span>JSON</span>
+                            </div>
                         </div>
                     </a>
                 </div>
-                <div class="project-item" data-aos="zoom-in" data-aos-duration="1500">
-                    <a href="https://tiagoalvesdasilva.github.io/Validador-de-formularios/">
-                        <img src="src/projetos/validador de formulario .jpg" alt="Projeto 5">
+
+                <div class="project-item" data-aos="zoom-in" data-aos-duration="1200">
+                    <a href="https://tiagoalvesdasilva.github.io/Validador-de-formularios/" target="_blank">
+                        <div class="project-img">
+                            <img src="src/projetos/validador de formulario .jpg" alt="Projeto Validador de Formulário" loading="lazy">
+                        </div>
                         <div class="project-content">
-                            <h3>Validador de formulário</h3>
-                            <p>Projeto feito para fazer validações de um formulario apenas com Javascript puro.</p>
+                            <h3>Validador de Formulário</h3>
+                            <p>Validações de formulário feitas apenas com JavaScript puro.</p>
+                            <div class="project-tags">
+                                <span>JavaScript</span>
+                            </div>
                         </div>
                     </a>
                 </div>
+
             </div>
         </div>
     </section>
@@ -155,33 +206,41 @@
             <div class="tech-grid container-contact">
                 <div class="tech-item contact-item" data-aos="fade-right">
                     <a href="mailto:tiago.alvessilva67@gmail.com">
-                        <img src="src/contato/gmail.png" alt="HTML" style="height: 50px; width: 50px;">
-                        <p><strong>Email</strong> <br>tiago.alvessilva67@gmail.com</p>
+                        <img src="src/contato/gmail.png" alt="Gmail" style="height: 50px; width: 50px;">
+                        <p><strong>Email</strong><br>tiago.alvessilva67@gmail.com</p>
                     </a>
                 </div>
                 <div class="tech-item contact-item" data-aos="fade-right">
                     <a href="https://github.com/tiagoalvesdasilva" target="_blank">
-                        <img src="src/contato/github-brands-solid.png" alt="HTML">
-                        <p><strong>GitHub</strong> <br> @tiagoalves</p>
+                        <img src="src/contato/github-brands-solid.png" alt="GitHub">
+                        <p><strong>GitHub</strong><br>@tiagoalvesdasilva</p>
                     </a>
                 </div>
                 <div class="tech-item contact-item" data-aos="fade-right">
                     <a href="https://www.linkedin.com/in/tiago-alvesdasilva/" target="_blank">
-                        <img src="src/contato/linkedin-brands-solid.png" alt="HTML">
-                        <p><strong>Linkedin</strong> <br> @tiagoalves</p>
+                        <img src="src/contato/linkedin-brands-solid.png" alt="LinkedIn">
+                        <p><strong>LinkedIn</strong><br>@tiago-alvesdasilva</p>
                     </a>
                 </div>
+                <!-- ATENÇÃO: o número no link (5561994176285) e o número exibido no texto
+                     (61 992281525) são diferentes. Confirme qual é o correto abaixo. -->
                 <div class="tech-item contact-item" data-aos="fade-right">
                     <a href="https://wa.me/5561994176285" target="_blank">
-                        <img src="src/contato/whatsapp-brands-solid.png" alt="HTML">
-                        <p><strong>WhatsApp</strong> <br/> (61) 992281525</p>
+                        <img src="src/contato/whatsapp-brands-solid.png" alt="WhatsApp">
+                        <p><strong>WhatsApp</strong><br>(61) 99417-6285</p>
                     </a>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Tiago Alves. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
 </body>
 </html>
