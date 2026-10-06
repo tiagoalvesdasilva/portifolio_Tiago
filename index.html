@@ -1,266 +1,216 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tiago Alves — Desenvolvedor Front-End especializado em HTML, CSS, JavaScript, TypeScript e Angular.">
-    <title>Tiago Alves | Desenvolvedor Front-End</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0A0E14">
+<title>Tiago Alves | Desenvolvedor Front-End</title>
+<meta name="description" content="Tiago Alves, desenvolvedor Front-End especializado em HTML, CSS, JavaScript, TypeScript e Angular. Veja meus projetos e entre em contato.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header id="main-header">
-        <div class="container">
-            <h1 class="logo">Tiago<span>.dev</span></h1>
-            <nav>
-                <button class="menu-toggle" aria-label="Abrir menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-links">
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#technologies">Tecnologias</a></li>
-                    <li><a href="#projects">Projetos</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top"><span>&gt;_</span> tiago.dev</a>
 
-    <section id="about" class="about-section" data-aos="fade-up">
-        <div class="container">
-            <div class="about-content">
-                <p class="eyebrow">Olá, meu nome é</p>
-                <h2 class="hero-name">Tiago Alves</h2>
-                <p class="hero-role"><span id="typed-role"></span><span class="cursor">|</span></p>
+    <nav aria-label="Principal">
+      <ul id="menu">
+        <li><a href="#projetos" data-scramble="hover">projetos</a></li>
+        <li><a href="#sobre" data-scramble="hover">sobre</a></li>
+        <li><a href="#contato" data-scramble="hover">contato</a></li>
+      </ul>
+    </nav>
 
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">Ver Projetos</a>
-                    <a href="#contact" class="btn btn-outline">Falar Comigo</a>
-                </div>
-
-                <div class="hero-socials">
-                    <a href="https://github.com/tiagoalvesdasilva" target="_blank" aria-label="GitHub">
-                        <img src="src/contato/github-brands-solid.png" alt="GitHub">
-                    </a>
-                    <a href="https://www.linkedin.com/in/tiago-alvesdasilva/" target="_blank" aria-label="LinkedIn">
-                        <img src="src/contato/linkedin-brands-solid.png" alt="LinkedIn">
-                    </a>
-                </div>
-            </div>
-
-            <div class="about-photo">
-                <picture>
-                    <source srcset="src/tecnologias/tiago-pequena.jpeg" media="(max-width: 768px)">
-                    <img src="src/tecnologias/foto_tiago.jpg" alt="Foto de Tiago Alves" class="profile-photo">
-                </picture>
-            </div>
-        </div>
-    </section>
-
-    <section class="about-me-section" data-aos="fade-up">
-        <div class="container">
-            <h2>Sobre mim</h2>
-            <div class="about-me-content">
-                <p>
-                    Sou um desenvolvedor Front-End apaixonado por transformar ideias em interfaces modernas,
-                    funcionais e bem estruturadas. Tenho foco em criar experiências agradáveis para o usuário
-                    utilizando boas práticas de desenvolvimento e código limpo.
-                </p>
-                <p>
-                    Trabalho principalmente com <strong>HTML, CSS, JavaScript, TypeScript e Angular</strong>,
-                    sempre buscando evoluir tecnicamente e aplicar conceitos de performance,
-                    responsividade e organização de projetos.
-                </p>
-                <p>
-                    Gosto de desafios que me façam aprender algo novo e estou em constante evolução
-                    para me tornar um profissional cada vez mais completo na área de tecnologia.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="technologies" class="technologies-section">
-        <div class="container">
-            <h2>Tecnologias</h2>
-            <div class="tech-grid">
-                <div class="tech-item" data-aos="flip-left">
-                    <img src="src/tecnologias/html (1).png" alt="HTML" loading="lazy">
-                    <span>HTML</span>
-                </div>
-                <div class="tech-item" data-aos="flip-left">
-                    <img src="src/tecnologias/css.png" alt="CSS" loading="lazy">
-                    <span>CSS</span>
-                </div>
-                <div class="tech-item" data-aos="flip-left">
-                    <img src="src/tecnologias/js.png" alt="JavaScript" loading="lazy">
-                    <span>JavaScript</span>
-                </div>
-                <div class="tech-item" data-aos="flip-left">
-                    <img src="src/tecnologias/typescript.png" alt="TypeScript" loading="lazy">
-                    <span>TypeScript</span>
-                </div>
-                <div class="tech-item" data-aos="flip-left">
-                    <img src="src/tecnologias/angular.png" alt="Angular" loading="lazy">
-                    <span>Angular</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects-section">
-    <div class="container">
-        <h2>Meus Projetos</h2>
-        <div class="projects-grid">
-
-            <div class="project-item" data-aos="zoom-in" data-aos-duration="1200">
-                <a href="https://angular-blog-mu.vercel.app/" target="_blank">
-                    <div class="project-img">
-                        <img src="src/projetos/angular-blog.jpg" alt="Projeto Blog" loading="lazy">
-                        <div class="project-overlay">
-                            <span>Ver Projeto</span>
-                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Blog</h3>
-                        <p>Blog sobre as últimas notícias de animes, feito com Angular.</p>
-                        <div class="project-tags">
-                            <span>Angular</span><span>TypeScript</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="project-item" data-aos="zoom-in" data-aos-duration="1200">
-                <a href="https://tiagoalvesdasilva.github.io/site_casamento/" target="_blank">
-                    <div class="project-img">
-                        <img src="src/projetos/casamento.jpg" alt="Projeto Casamento" loading="lazy">
-                        <div class="project-overlay">
-                            <span>Ver Projeto</span>
-                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Casamento</h3>
-                        <p>Site feito para o casamento da minha irmã.</p>
-                        <div class="project-tags">
-                            <span>HTML</span><span>CSS</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="project-item" data-aos="zoom-in" data-aos-duration="1200">
-                <a href="https://tiagoalvesdasilva.github.io/countdown/" target="_blank">
-                    <div class="project-img">
-                        <img src="src/projetos/contagem regressiva .jpg" alt="Projeto Contagem Regressiva" loading="lazy">
-                        <div class="project-overlay">
-                            <span>Ver Projeto</span>
-                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Contagem Regressiva</h3>
-                        <p>Contagem regressiva até o final do ano.</p>
-                        <div class="project-tags">
-                            <span>JavaScript</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="project-item" data-aos="zoom-in" data-aos-duration="1200">
-                <a href="https://tiagoalvesdasilva.github.io/quiz/" target="_blank">
-                    <div class="project-img">
-                        <img src="src/projetos/jogo da velha .jpg" alt="Projeto Quiz" loading="lazy">
-                        <div class="project-overlay">
-                            <span>Ver Projeto</span>
-                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Quiz</h3>
-                        <p>Projeto em JavaScript puro, com perguntas e respostas vindas de um JSON.</p>
-                        <div class="project-tags">
-                            <span>JavaScript</span><span>JSON</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="project-item" data-aos="zoom-in" data-aos-duration="1200">
-                <a href="https://tiagoalvesdasilva.github.io/Validador-de-formularios/" target="_blank">
-                    <div class="project-img">
-                        <img src="src/projetos/validador de formulario .jpg" alt="Projeto Validador de Formulário" loading="lazy">
-                        <div class="project-overlay">
-                            <span>Ver Projeto</span>
-                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Validador de Formulário</h3>
-                        <p>Validações de formulário feitas apenas com JavaScript puro.</p>
-                        <div class="project-tags">
-                            <span>JavaScript</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-        </div>
+    <div class="tools">
+      <button class="pal-open" id="pal-open" type="button" aria-label="Abrir menu de comandos">
+        <span>Comandos</span><kbd class="kbd">Ctrl K</kbd>
+      </button>
+      <button class="burger" id="bg" type="button" aria-label="Abrir menu" aria-expanded="false"><i></i><i></i><i></i></button>
     </div>
-</section>
+  </div>
+</header>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Contato</h2>
-            <div class="tech-grid container-contact">
-                <div class="tech-item contact-item" data-aos="fade-right">
-                    <a href="mailto:tiago.alvessilva67@gmail.com">
-                        <img src="src/contato/gmail.png" alt="Gmail" style="height: 50px; width: 50px;">
-                        <p><strong>Email</strong><br>tiago.alvessilva67@gmail.com</p>
-                    </a>
-                </div>
-                <div class="tech-item contact-item" data-aos="fade-right">
-                    <a href="https://github.com/tiagoalvesdasilva" target="_blank">
-                        <img src="src/contato/github-brands-solid.png" alt="GitHub">
-                        <p><strong>GitHub</strong><br>@tiagoalvesdasilva</p>
-                    </a>
-                </div>
-                <div class="tech-item contact-item" data-aos="fade-right">
-                    <a href="https://www.linkedin.com/in/tiago-alvesdasilva/" target="_blank">
-                        <img src="src/contato/linkedin-brands-solid.png" alt="LinkedIn">
-                        <p><strong>LinkedIn</strong><br>@tiago-alvesdasilva</p>
-                    </a>
-                </div>
-                <!-- ATENÇÃO: o número no link (5561994176285) e o número exibido no texto
-                     (61 992281525) são diferentes. Confirme qual é o correto abaixo. -->
-                <div class="tech-item contact-item" data-aos="fade-right">
-                    <a href="https://wa.me/5561994176285" target="_blank">
-                        <img src="src/contato/whatsapp-brands-solid.png" alt="WhatsApp">
-                        <p><strong>WhatsApp</strong><br>(61) 99417-6285</p>
-                    </a>
-                </div>
-            </div>
+<main id="top">
+
+  <!-- INÍCIO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <h1>
+          <span class="ln" data-scramble="load">Tiago</span>
+          <span class="ln" data-scramble="load">Alves</span>
+        </h1>
+        <p class="role fade"><span>&gt;</span> Desenvolvedor Front-End</p>
+        <p class="lead fade">Crio interfaces modernas, responsivas e bem estruturadas com HTML, CSS, JavaScript, TypeScript e Angular.</p>
+        <div class="cta fade">
+          <a class="btn p" href="#projetos">Ver projetos</a>
+          <a class="btn o" href="#contato">Entrar em contato</a>
         </div>
-    </section>
+      </div>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; <span id="year"></span> Tiago Alves. Todos os direitos reservados.</p>
+      <div class="hud fade">
+        <div class="hud-img">
+          <picture>
+            <source srcset="src/tecnologias/tiago-pequena.jpeg" media="(max-width: 768px)">
+            <img src="src/tecnologias/foto_tiago.jpg" alt="Foto de Tiago Alves">
+          </picture>
+          <span class="scan" aria-hidden="true"></span>
         </div>
-    </footer>
+        <span class="c tl" aria-hidden="true"></span>
+        <span class="c tr" aria-hidden="true"></span>
+        <span class="c bl" aria-hidden="true"></span>
+        <span class="c br" aria-hidden="true"></span>
+        <p class="cap"><span>tiago.dev</span><span>Front-End</span></p>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- PROJETOS -->
+  <section class="projects" id="projetos">
+    <div class="wrap">
+      <div class="head">
+        <h2 data-scramble="view">Projetos</h2>
+        <p class="meta">5 projetos publicados. Clique em qualquer um para abrir.</p>
+      </div>
+
+      <div class="grid">
+
+        <a class="card" href="https://angular-blog-mu.vercel.app/" target="_blank" rel="noopener">
+          <div class="cbar"><span class="dots"><i></i><i></i><i></i></span><span class="path">~/projetos/blog</span></div>
+          <div class="th"><img src="src/projetos/angular-blog.jpg" alt="Projeto Blog" loading="lazy"><span class="ov">abrir projeto ↗</span></div>
+          <div class="inf">
+            <h3 data-scramble="hover">Blog</h3>
+            <p>Blog sobre as últimas notícias de animes, feito com Angular.</p>
+            <div class="tags"><span>Angular</span><span>TypeScript</span></div>
+          </div>
+        </a>
+
+        <a class="card" href="https://tiagoalvesdasilva.github.io/site_casamento/" target="_blank" rel="noopener">
+          <div class="cbar"><span class="dots"><i></i><i></i><i></i></span><span class="path">~/projetos/casamento</span></div>
+          <div class="th"><img src="src/projetos/casamento.jpg" alt="Projeto Casamento" loading="lazy"><span class="ov">abrir projeto ↗</span></div>
+          <div class="inf">
+            <h3 data-scramble="hover">Casamento</h3>
+            <p>Site feito para o casamento da minha irmã.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span></div>
+          </div>
+        </a>
+
+        <a class="card" href="https://tiagoalvesdasilva.github.io/countdown/" target="_blank" rel="noopener">
+          <div class="cbar"><span class="dots"><i></i><i></i><i></i></span><span class="path">~/projetos/contagem-regressiva</span></div>
+          <div class="th"><img src="src/projetos/contagem regressiva .jpg" alt="Projeto Contagem Regressiva" loading="lazy"><span class="ov">abrir projeto ↗</span></div>
+          <div class="inf">
+            <h3 data-scramble="hover">Contagem Regressiva</h3>
+            <p>Contagem regressiva até o final do ano.</p>
+            <div class="tags"><span>JavaScript</span></div>
+          </div>
+        </a>
+
+        <a class="card" href="https://tiagoalvesdasilva.github.io/quiz/" target="_blank" rel="noopener">
+          <div class="cbar"><span class="dots"><i></i><i></i><i></i></span><span class="path">~/projetos/quiz</span></div>
+          <div class="th"><img src="src/projetos/jogo da velha .jpg" alt="Projeto Quiz" loading="lazy"><span class="ov">abrir projeto ↗</span></div>
+          <div class="inf">
+            <h3 data-scramble="hover">Quiz</h3>
+            <p>Projeto em JavaScript puro, com perguntas e respostas vindas de um JSON.</p>
+            <div class="tags"><span>JavaScript</span><span>JSON</span></div>
+          </div>
+        </a>
+
+        <a class="card" href="https://tiagoalvesdasilva.github.io/Validador-de-formularios/" target="_blank" rel="noopener">
+          <div class="cbar"><span class="dots"><i></i><i></i><i></i></span><span class="path">~/projetos/validador-de-formulario</span></div>
+          <div class="th"><img src="src/projetos/validador de formulario .jpg" alt="Projeto Validador de Formulário" loading="lazy"><span class="ov">abrir projeto ↗</span></div>
+          <div class="inf">
+            <h3 data-scramble="hover">Validador de Formulário</h3>
+            <p>Validações de formulário feitas apenas com JavaScript puro.</p>
+            <div class="tags"><span>JavaScript</span></div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="about" id="sobre">
+    <div class="wrap">
+      <div class="about-body">
+        <h2 data-scramble="view">Sobre mim</h2>
+        <p>Sou um desenvolvedor Front-End apaixonado por transformar ideias em interfaces modernas, funcionais e bem estruturadas. Tenho foco em criar experiências agradáveis para o usuário utilizando boas práticas de desenvolvimento e código limpo.</p>
+        <p>Trabalho principalmente com <strong>HTML, CSS, JavaScript, TypeScript e Angular</strong>, sempre buscando evoluir tecnicamente e aplicar conceitos de performance, responsividade e organização de projetos.</p>
+        <p>Gosto de desafios que me façam aprender algo novo e estou em constante evolução para me tornar um profissional cada vez mais completo na área de tecnologia.</p>
+
+        <h3>Tecnologias</h3>
+        <ul class="stack">
+          <li><img src="src/tecnologias/html (1).png" alt="" loading="lazy">HTML</li>
+          <li><img src="src/tecnologias/css.png" alt="" loading="lazy">CSS</li>
+          <li><img src="src/tecnologias/js.png" alt="" loading="lazy">JavaScript</li>
+          <li><img src="src/tecnologias/typescript.png" alt="" loading="lazy">TypeScript</li>
+          <li><img src="src/tecnologias/angular.png" alt="" loading="lazy">Angular</li>
+        </ul>
+      </div>
+
+      <div class="win" id="win">
+        <div class="cbar"><span class="dots"><i></i><i></i><i></i></span><span class="path">perfil.ts</span></div>
+        <div class="code">
+          <span class="ln" style="--i:0"><span class="k">const</span> <span class="v">tiago</span> <span class="p">= {</span></span>
+          <span class="ln" style="--i:1">  <span class="a">cargo</span><span class="p">:</span> <span class="s">"Desenvolvedor Front-End"</span><span class="p">,</span></span>
+          <span class="ln" style="--i:2">  <span class="a">stack</span><span class="p">: [</span></span>
+          <span class="ln" style="--i:3">    <span class="s">"HTML"</span><span class="p">,</span> <span class="s">"CSS"</span><span class="p">,</span> <span class="s">"JavaScript"</span><span class="p">,</span></span>
+          <span class="ln" style="--i:4">    <span class="s">"TypeScript"</span><span class="p">,</span> <span class="s">"Angular"</span></span>
+          <span class="ln" style="--i:5">  <span class="p">],</span></span>
+          <span class="ln" style="--i:6">  <span class="a">foco</span><span class="p">: [</span><span class="s">"responsividade"</span><span class="p">,</span> <span class="s">"performance"</span><span class="p">],</span></span>
+          <span class="ln" style="--i:7">  <span class="a">contato</span><span class="p">:</span> <span class="s">"tiago.alvessilva67@gmail.com"</span><span class="p">,</span></span>
+          <span class="ln" style="--i:8"><span class="p">};</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contact" id="contato">
+    <div class="wrap">
+      <h2 data-scramble="view">Vamos conversar?</h2>
+      <p class="lead">Procurando um desenvolvedor Front-End para o seu time ou projeto? Escolha o canal que preferir.</p>
+
+      <div class="term">
+        <div class="cbar"><span class="dots"><i></i><i></i><i></i></span><span class="path">contato</span></div>
+        <ul class="rows">
+          <li>
+            <a class="row main" href="mailto:tiago.alvessilva67@gmail.com"><span class="lb">email</span><span class="vl">tiago.alvessilva67@gmail.com</span><span class="go">enviar ↗</span></a>
+            <button class="copy" id="copy" type="button">Copiar</button>
+          </li>
+          <li><a class="row" href="https://wa.me/5561994176285" target="_blank" rel="noopener"><span class="lb">whatsapp</span><span class="vl">(61) 99417-6285</span><span class="go">abrir ↗</span></a></li>
+          <li><a class="row" href="https://www.linkedin.com/in/tiago-alvesdasilva/" target="_blank" rel="noopener"><span class="lb">linkedin</span><span class="vl">@tiago-alvesdasilva</span><span class="go">abrir ↗</span></a></li>
+          <li><a class="row" href="https://github.com/tiagoalvesdasilva" target="_blank" rel="noopener"><span class="lb">github</span><span class="vl">@tiagoalvesdasilva</span><span class="go">abrir ↗</span></a></li>
+        </ul>
+        <p class="hint">Dica: pressione <kbd class="kbd">Ctrl K</kbd> para abrir o menu de comandos.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y">2026</span> Tiago Alves</span>
+    <span>Feito com HTML, SCSS e JavaScript</span>
+  </div>
+</footer>
+
+<!-- MENU DE COMANDOS -->
+<div class="pal" id="pal" role="dialog" aria-modal="true" aria-label="Menu de comandos" hidden>
+  <div class="pal-box">
+    <input id="pal-in" type="text" placeholder="Digite um comando (ex: projetos, email, github)" autocomplete="off" spellcheck="false" aria-controls="pal-list">
+    <ul id="pal-list" role="listbox"></ul>
+    <p class="keys">↑↓ navegar &nbsp; Enter abrir &nbsp; Esc fechar</p>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
 </body>
 </html>
