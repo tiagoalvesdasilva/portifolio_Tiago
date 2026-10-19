@@ -30,6 +30,11 @@
   }
   b.onclick = function () { tog(!m.classList.contains('open')); };
   m.addEventListener('click', function (e) { if (e.target.closest('a')) tog(false); });
+    // Fecha o menu ao tocar fora dele ou ao aumentar a janela
+  d.addEventListener('click', function (e) {
+    if (m.classList.contains('open') && !e.target.closest('nav') && !e.target.closest('#bg')) tog(false);
+  });
+  window.addEventListener('resize', function () { if (window.innerWidth > 860) tog(false); });
 
   // ===== Aviso rápido (toast) =====
   function toast(msg) {
