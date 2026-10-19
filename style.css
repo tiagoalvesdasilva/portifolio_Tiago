@@ -1089,4 +1089,92 @@ footer .wrap {
     animation: none;
     clip-path: none;
   }
+}
+@media (max-width: 560px) {
+  section {
+    padding: 48px 0;
+  }
+  .projects .head {
+    margin-bottom: 24px;
+  }
+  .grid {
+    gap: 14px;
+  }
+  .card .cbar {
+    padding: 7px 12px;
+  }
+  .card .cbar .path {
+    font-size: 0.68rem;
+  }
+  .card .th {
+    height: 110px;
+  }
+  .card .inf {
+    padding: 14px 16px 16px;
+  }
+  .card .inf h3 {
+    margin-bottom: 4px;
+    font-size: 1.02rem;
+  }
+  .card .inf p {
+    margin: 0 0 10px;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .card .tags {
+    gap: 6px;
+  }
+  .card .tags span {
+    padding: 2px 8px;
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 560px) and (hover: none) {
+  .card .ov {
+    inset: auto 8px 8px auto;
+    padding: 4px 9px;
+    font-size: 0.66rem;
+  }
+}
+@media (max-width: 560px) {
+  .contact .lead {
+    margin: 10px 0 20px;
+  }
+  .term .cbar {
+    padding: 7px 12px;
+  }
+  .rows li {
+    flex-direction: row;
+    align-items: center;
+  }
+  .row {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 11px 16px;
+  }
+  .row .lb {
+    grid-column: auto;
+    font-size: 0.7rem;
+  }
+  .row .vl {
+    font-size: 0.92rem;
+    line-height: 1.4;
+  }
+  .row.main .vl {
+    font-size: 0.92rem;
+  }
+  .row .go {
+    display: none;
+  }
+  .copy {
+    align-self: center;
+    min-height: 36px;
+    margin: 0 12px 0 0;
+    padding: 6px 12px;
+    font-size: 0.74rem;
+  }
 }/*# sourceMappingURL=style.css.map */
