@@ -5,7 +5,8 @@ $line: #202B3A;
 $tx: #E6EDF3;
 $mute: #8B9BB0;
 $blue: #58A6FF;
-$blue-dark: #3D8BE6;
+$blue-hover: #75B8FF;
+$blue-text: #94C8FF;
 $green: #56D364;
 
 $sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -13,9 +14,19 @@ $mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospac
 
 $header-h: 68px;
 $bp-tablet: 860px;
+$bp-phone: 560px;
 
+// ===== MIXINS =====
 @mixin tablet {
     @media (max-width: $bp-tablet) { @content; }
+}
+
+@mixin phone {
+    @media (max-width: $bp-phone) { @content; }
+}
+
+@mixin touch {
+    @media (hover: none) { @content; }
 }
 
 @mixin mono($size: 0.85rem, $weight: 500) {
@@ -28,6 +39,8 @@ $bp-tablet: 860px;
 html {
     scroll-behavior: smooth;
     scroll-padding-top: $header-h + 12px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -38,6 +51,7 @@ body {
     color: $tx;
     font: 400 1.02rem/1.7 $sans;
     -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
 
     // grade técnica + brilho suave no topo
     &::before {
@@ -87,6 +101,8 @@ a {
     max-width: 1120px;
     margin: 0 auto;
     padding: 0 clamp(20px, 5vw, 40px);
+
+    @include phone { padding: 0 18px; }
 }
 
 section { padding: clamp(64px, 9vw, 110px) 0; }
@@ -127,6 +143,8 @@ header {
         @include mono(1.05rem, 800);
 
         span { color: $blue; }
+
+        @include phone { font-size: 0.95rem; }
     }
 
     nav ul {
@@ -160,12 +178,15 @@ header {
         display: flex;
         align-items: center;
         gap: 10px;
+
+        @include phone { gap: 6px; }
     }
 
     .pal-open {
         display: flex;
         align-items: center;
         gap: 10px;
+        min-height: 40px;
         padding: 7px 12px;
         border: 1px solid $line;
         border-radius: 8px;
@@ -181,35 +202,40 @@ header {
         }
 
         @include tablet { kbd { display: none; } }
+
+        @include phone {
+            padding: 7px 10px;
+            font-size: 0.76rem;
+        }
     }
 
     .burger {
         display: none;
         position: relative;
-        width: 40px;
-        height: 40px;
+        width: 44px;
+        height: 44px;
         background: none;
         border: 0;
         cursor: pointer;
 
         i {
             position: absolute;
-            left: 8px;
-            right: 8px;
+            left: 10px;
+            right: 10px;
             height: 2px;
             border-radius: 2px;
             background: $tx;
             transition: 0.3s;
 
-            &:nth-child(1) { top: 13px; }
-            &:nth-child(2) { top: 19px; }
-            &:nth-child(3) { top: 25px; }
+            &:nth-child(1) { top: 15px; }
+            &:nth-child(2) { top: 21px; }
+            &:nth-child(3) { top: 27px; }
         }
 
         &.x i {
-            &:nth-child(1) { top: 19px; transform: rotate(45deg); }
+            &:nth-child(1) { top: 21px; transform: rotate(45deg); }
             &:nth-child(2) { opacity: 0; }
-            &:nth-child(3) { top: 19px; transform: rotate(-45deg); }
+            &:nth-child(3) { top: 21px; transform: rotate(-45deg); }
         }
     }
 }
@@ -231,7 +257,7 @@ header {
         color: $bg;
 
         &:hover {
-            background: lighten($blue, 6%);
+            background: $blue-hover;
             box-shadow: 0 8px 24px rgba($blue, 0.3);
         }
     }
@@ -249,19 +275,33 @@ header {
 .hero {
     padding: ($header-h + 60px) 0 clamp(64px, 9vw, 110px);
 
+    @include phone { padding: ($header-h + 28px) 0 56px; }
+
     .wrap {
         display: grid;
         grid-template-columns: 1.25fr 1fr;
         align-items: center;
         gap: clamp(32px, 6vw, 80px);
 
+        // Tablet: texto à esquerda, foto menor à direita
         @include tablet {
+            grid-template-columns: 1fr 210px;
+            gap: 28px;
+
+            .hud {
+                max-width: 210px;
+                margin: 0;
+            }
+        }
+
+        // Celular: uma coluna, foto pequena no topo
+        @include phone {
             grid-template-columns: 1fr;
+            gap: 20px;
 
             .hud {
                 order: -1;
-                max-width: 220px;
-                margin: 0 0 12px;
+                max-width: 150px;
             }
         }
     }
@@ -270,6 +310,8 @@ header {
         font-size: clamp(2.9rem, 9vw, 6rem);
         line-height: 1;
         letter-spacing: -0.045em;
+
+        @include phone { font-size: clamp(3rem, 16vw, 4.2rem); }
     }
 
     .ln {
@@ -293,6 +335,11 @@ header {
         @include mono(1.15rem, 500);
 
         span { color: $green; }
+
+        @include phone {
+            margin-top: 18px;
+            font-size: 1rem;
+        }
     }
 
     .lead {
@@ -300,12 +347,24 @@ header {
         margin: 16px 0 32px;
         font-size: clamp(1.05rem, 2vw, 1.18rem);
         color: $mute;
+
+        @include phone {
+            margin-bottom: 26px;
+            font-size: 1rem;
+        }
     }
 
     .cta {
         display: flex;
         flex-wrap: wrap;
         gap: 12px;
+
+        @include phone {
+            .btn {
+                flex: 1 1 100%;
+                text-align: center;
+            }
+        }
     }
 }
 
@@ -437,6 +496,8 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(#{"min(100%, 330px)"}, 1fr));
     gap: 26px;
+
+    @include phone { gap: 20px; }
 }
 
 .card {
@@ -464,6 +525,8 @@ header {
         overflow: hidden;
         border-bottom: 1px solid $line;
 
+        @include phone { height: 170px; }
+
         img {
             display: block;
             width: 100%;
@@ -488,8 +551,23 @@ header {
         transition: opacity 0.3s;
     }
 
+    // Telas de toque não têm "passar o mouse": etiqueta sempre visível
+    @include touch {
+        .ov {
+            inset: auto 12px 12px auto;
+            padding: 6px 12px;
+            font-size: 0.74rem;
+            background: rgba($bg, 0.88);
+            border: 1px solid rgba($blue, 0.4);
+            border-radius: 6px;
+            opacity: 1;
+        }
+    }
+
     .inf {
         padding: 20px 22px 24px;
+
+        @include phone { padding: 18px 18px 22px; }
 
         h3 {
             margin-bottom: 8px;
@@ -513,7 +591,7 @@ header {
             border: 1px solid rgba($blue, 0.28);
             border-radius: 6px;
             background: rgba($blue, 0.08);
-            color: lighten($blue, 12%);
+            color: $blue-text;
             @include mono(0.74rem);
         }
     }
@@ -547,6 +625,8 @@ header {
         margin: 0 0 1.2em;
         font-size: 1.07rem;
         color: $mute;
+
+        @include phone { font-size: 1rem; }
 
         strong {
             color: $tx;
@@ -628,6 +708,20 @@ header {
     .a { color: #79C0FF; }
     .s { color: #A5D6FF; }
     .p { color: #8B9BB0; }
+
+    // Celular: fonte menor, sem números de linha e com quebra de linha
+    @include phone {
+        padding: 14px 14px 18px;
+        font-size: 0.7rem;
+        line-height: 1.8;
+
+        .ln {
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+
+            &::before { display: none; }
+        }
+    }
 }
 
 // Código "digitado" linha a linha quando a janela aparece
@@ -650,6 +744,11 @@ header {
         margin: 14px 0 32px;
         font-size: 1.1rem;
         color: $mute;
+
+        @include phone {
+            margin-bottom: 24px;
+            font-size: 1rem;
+        }
     }
 }
 
@@ -669,6 +768,8 @@ header {
         display: flex;
         align-items: stretch;
         border-bottom: 1px solid $line;
+
+        @include phone { flex-direction: column; }
     }
 }
 
@@ -711,10 +812,17 @@ header {
 
         .lb { grid-column: 1 / -1; }
     }
+
+    @include phone {
+        padding: 16px 18px;
+
+        &.main .vl { font-size: 1rem; }
+    }
 }
 
 .copy {
     align-self: center;
+    min-height: 40px;
     margin: 0 16px 0 0;
     padding: 8px 14px;
     border: 1px solid $line;
@@ -729,6 +837,11 @@ header {
         border-color: rgba($blue, 0.6);
         background: rgba($blue, 0.08);
     }
+
+    @include phone {
+        align-self: flex-start;
+        margin: 0 18px 16px;
+    }
 }
 
 .hint {
@@ -736,6 +849,8 @@ header {
     padding: 14px 22px;
     @include mono(0.78rem, 400);
     color: $mute;
+
+    @include touch { display: none; }
 }
 
 // ===== FOOTER =====
@@ -750,6 +865,11 @@ footer {
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 8px;
+
+        @include phone {
+            flex-direction: column;
+            gap: 4px;
+        }
     }
 }
 
@@ -766,10 +886,13 @@ footer {
     backdrop-filter: blur(6px);
 
     &[hidden] { display: none; }
+
+    @include phone { padding-top: 9vh; }
 }
 
 .pal-box {
-    width: min(580px, 92vw);
+    width: 92vw;
+    max-width: 580px;
     overflow: hidden;
     background: $panel;
     border: 1px solid rgba($blue, 0.35);
@@ -783,7 +906,9 @@ footer {
         border-bottom: 1px solid $line;
         background: transparent;
         color: $tx;
-        @include mono(0.98rem, 400);
+        font-family: $mono;
+        font-size: 16px; // 16px evita o zoom automático do iPhone
+        font-weight: 400;
         outline: none;
 
         &::placeholder { color: #5E6E83; }
@@ -795,6 +920,8 @@ footer {
         list-style: none;
         margin: 0;
         padding: 8px;
+
+        @include phone { max-height: 45vh; }
     }
 
     li {
@@ -802,6 +929,7 @@ footer {
         justify-content: space-between;
         align-items: center;
         gap: 16px;
+        min-height: 44px;
         padding: 11px 14px;
         border-radius: 8px;
         font-weight: 500;
@@ -826,13 +954,15 @@ footer {
         border-top: 1px solid $line;
         @include mono(0.72rem, 400);
         color: $mute;
+
+        @include touch { display: none; }
     }
 }
 
 .toast {
     position: fixed;
     left: 50%;
-    bottom: 28px;
+    bottom: calc(28px + env(safe-area-inset-bottom, 0px));
     z-index: 120;
     padding: 10px 18px;
     border: 1px solid rgba($green, 0.5);
@@ -851,7 +981,7 @@ footer {
     }
 }
 
-// ===== MENU MOBILE =====
+// ===== MENU MOBILE / TABLET =====
 @include tablet {
     header {
         .burger { display: block; }
